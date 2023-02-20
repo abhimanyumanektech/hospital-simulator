@@ -1,0 +1,103 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "James Thomas",
+      "condition": "F",
+      "suggested_medicine": "P",
+      "given_medicine": [
+        {
+          "date": "20-02-2023",
+          "medicine": "P",
+          "condition": "F"
+        },
+        {
+          "date": "21-02-2023",
+          "medicine": "P",
+          "condition": "F"
+        },
+        {
+          "date": "22-02-2023",
+          "medicine": "P",
+          "condition": "H"
+        },
+        {
+          "date": "23-02-2023",
+          "medicine": "As",
+          "condition": "X"
+        }
+      ],
+      "dose": 3
+    },
+    {
+      "id": 2,
+      "name": "Peter England",
+      "condition": "T",
+      "suggested_medicine": "An",
+      "dose": 180,
+      "given_medicine": [
+        {
+          "date": "20-02-2023",
+          "medicine": "An",
+          "condition": "T"
+        },
+        {
+          "date": "21-02-2023",
+          "medicine": "An",
+          "condition": "T"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Ash Katcham",
+      "condition": "D",
+      "suggested_medicine": "I",
+      "dose": 0,
+      "given_medicine": []
+    },
+    {
+      "id": 4,
+      "name": "Brock Lesnar",
+      "condition": "F",
+      "suggested_medicine": "P",
+      "dose": 4,
+      "given_medicine": [
+        {
+          "date": "20-02-2023",
+          "medicine": "P",
+          "condition": "F"
+        },
+        {
+          "date": "21-02-2023",
+          "medicine": "P",
+          "condition": "F"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Roman Reigns",
+      "condition": "D",
+      "suggested_medicine": "I",
+      "dose": 0,
+      "given_medicine": [
+        {
+          "date": "20-02-2023",
+          "medicine": "I",
+          "condition": "D"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

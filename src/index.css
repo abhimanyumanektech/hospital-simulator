@@ -1,13 +1,57 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: #f0f0f0; */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.chart_table th,
+.chart_table td {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: center;
+}
+
+.chart_table th.med,
+.chart_table td.med {
+  width: 60%;
+}
+
+.chart_table th.date,
+.chart_table td.date {
+  width: 20%;
+}
+
+.chart_table th.cond,
+.chart_table td.cond {
+  width: 20%;
+}
+
+.chart_table td.cond span {
+  background: rgb(255, 255, 23);
+  padding: 3px 5px;
+}
+
+.chart_table td.cond.dead span {
+  background: red;
+  color: #fff;
+}
+
+.chart_table td.cond.healthy span {
+  background: green;
+  color: #fff;
+}
+
+.chart_table td.cond.tuber span {
+  background: rgb(255, 115, 0);
+  color: #fff;
 }
