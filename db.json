@@ -49,14 +49,6 @@
       ]
     },
     {
-      "id": 3,
-      "name": "Ash Katcham",
-      "condition": "D",
-      "suggested_medicine": "I",
-      "dose": 0,
-      "given_medicine": []
-    },
-    {
       "id": 4,
       "name": "Brock Lesnar",
       "condition": "F",
@@ -84,6 +76,11 @@
       "given_medicine": [
         {
           "date": "20-02-2023",
+          "medicine": "I",
+          "condition": "D"
+        },
+        {
+          "date": "21-02-2023",
           "medicine": "I",
           "condition": "D"
         }
