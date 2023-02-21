@@ -6,6 +6,8 @@ import { GlobalContext } from "../context/GlobalContextProvider";
 import { getPatients } from "../utils/GetListofPatients";
 import toast from "react-hot-toast";
 
+// used styled components
+
 const Wrapper = styled(Box)`
   padding: 20px;
 `;
@@ -16,8 +18,13 @@ const Table = styled("table")`
   width: 100%;
 `;
 
+// Component to list out all the patient
+
 const ListOfPatients = () => {
-  const { patients, setPatients } = useContext(GlobalContext);
+  const { patients, setPatients } = useContext(GlobalContext); // Imported context from global context provider
+
+  // Getting all patients and setting in context
+
   useEffect(() => {
     if (patients.length === 0) {
       getPatients()
@@ -29,6 +36,8 @@ const ListOfPatients = () => {
         });
     }
   }, []);
+
+  // To delete patient record from the db
 
   const handleDeleteRecord = async (id) => {
     await axios
@@ -51,12 +60,9 @@ const ListOfPatients = () => {
       });
   };
 
-  useEffect(() => {
-    console.log(patients, "from list");
-  }, [patients]);
-
   return (
     <Wrapper>
+      {/* Table to show list of patient starts */}
       <Table className="chart_table">
         <thead>
           <tr>

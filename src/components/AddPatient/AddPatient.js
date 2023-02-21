@@ -16,10 +16,14 @@ import React, { useContext, useState } from "react";
 import { GlobalContext } from "../context/GlobalContextProvider";
 import toast from "react-hot-toast";
 
+// used styled components
+
 const DialogContentWrapper = styled(DialogContent)`
   padding: 15px 24px 5px !important;
   width: 400px;
 `;
+
+// Component to add patient in the db
 
 const AddPatientDialog = ({ open, handleClose }) => {
   const { patients, setPatients } = useContext(GlobalContext);
@@ -28,6 +32,8 @@ const AddPatientDialog = ({ open, handleClose }) => {
   const [sugg_med, setSugg_med] = useState("");
   const [dose, setDose] = useState(0);
 
+  // Cancel the patient addition
+
   const handleCancelSubmission = () => {
     setName("");
     setCondition("");
@@ -35,6 +41,8 @@ const AddPatientDialog = ({ open, handleClose }) => {
     setDose(0);
     handleClose();
   };
+
+  // Submit the patient details
 
   const handleSubmit = async () => {
     let data = {

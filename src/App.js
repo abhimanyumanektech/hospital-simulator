@@ -8,10 +8,12 @@ import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
+    // Wrapped the context with whole application
     <GlobalContextProvider>
       <BrowserRouter>
+        {/* Header Component */}
         <Header />
-        <Toaster
+        <Toaster // Toaster to show notifications
           toastOptions={{
             duration: 4000,
             style: {
@@ -23,6 +25,7 @@ function App() {
             },
           }}
         />
+        {/* Routes to navigate within application */}
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/list" element={<ListOfPatients />} />

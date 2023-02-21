@@ -3,6 +3,8 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalContextProvider";
 import GiveMedicine from "./GiveMedicine";
 
+// used styled components
+
 const Table = styled("table")`
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.23);
@@ -10,12 +12,16 @@ const Table = styled("table")`
   margin-top: 20px;
 `;
 
+// Component for showing the patient chart with given medicine, condition as per daily basis
+
 const PatientChart = () => {
-  const { givenMedicines } = useContext(GlobalContext);
+  const { givenMedicines } = useContext(GlobalContext); // Imported context from global context provider
 
   return (
     <>
+      {/* Component to add medicines on daily basis */}
       <GiveMedicine />
+      {/* Chart table starts */}
       <Table className="chart_table">
         <thead>
           <tr>

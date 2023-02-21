@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Summary from "./Summary";
 
+// used styled components
+
 const HeaderTitle = styled(Typography)`
   font-size: 30px;
   font-weight: 700;
@@ -25,6 +27,8 @@ const ListOfPatients = styled(Link)`
   text-transform: uppercase;
   font-weight: 600;
 `;
+
+// Component for header section
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -56,6 +60,7 @@ const Header = () => {
             <Add fontSize="small" /> Add Patient
           </AddPatient>
         </Box>
+        {/* Component for add patient form */}
         <AddPatientDialog open={open} handleClose={handleClose} />
       </Grid>
     </HeaderMain>

@@ -4,6 +4,8 @@ import axios from "axios";
 import { GlobalContext } from "../context/GlobalContextProvider";
 import { getPatients } from "../utils/GetListofPatients";
 
+// Component to select patient on home screen
+
 const SelectPatient = () => {
   const {
     patients,
@@ -12,7 +14,9 @@ const SelectPatient = () => {
     setSelectedPatient,
     setPatientDetails,
     setGivenMedicines,
-  } = useContext(GlobalContext);
+  } = useContext(GlobalContext); // Imported context from global context provider
+
+  // After selecting patient, get the patient details
 
   const getDetails = async (id) => {
     if (id !== "") {
@@ -35,10 +39,6 @@ const SelectPatient = () => {
         console.log(err);
       });
   }, []);
-
-  // useEffect(() => {
-  //   console.log(patientDetails, "patientDetails");
-  // }, [patientDetails]);
 
   return (
     <div>

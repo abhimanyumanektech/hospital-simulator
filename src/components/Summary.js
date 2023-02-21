@@ -2,9 +2,13 @@ import { styled } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "./context/GlobalContextProvider";
 
+// used styled components
+
 const Span = styled("span")`
   margin: 0 5px;
 `;
+
+// Component to show the summary of total patient's conditions
 
 const Summary = () => {
   let SummarizedData = {
@@ -14,8 +18,10 @@ const Summary = () => {
     fever: [],
     tuberculosis: [],
   };
-  const { patients } = useContext(GlobalContext);
+  const { patients } = useContext(GlobalContext); // Imported context from global context provider
   const [summary, setSummary] = useState(SummarizedData);
+
+  // Function to set data as per patients condition
 
   useEffect(() => {
     let tempFever, tempDiabetes, tempDead, tempTuber, tempHealthy;

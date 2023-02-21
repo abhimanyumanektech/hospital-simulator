@@ -5,6 +5,8 @@ import axios from "axios";
 import { GlobalContext } from "../context/GlobalContextProvider";
 import toast from "react-hot-toast";
 
+// used styled components
+
 const SelectMedicine = styled("select")`
   padding: 1px 3px;
 `;
@@ -14,13 +16,17 @@ const Form = styled("form")`
   text-align: center;
 `;
 
+// Component to add medicines given to the patient on daily basis
+
 const GiveMedicine = () => {
   const [medicine, setMedicine] = useState("");
   const [condition, setCondition] = useState("");
   const [conditionDisabled, setConditionDisabled] = useState(false);
   const [date, setDate] = useState(moment().format("DD-MM-YYYY"));
   const { selectedPatient, givenMedicines, setGivenMedicines, patientDetails } =
-    useContext(GlobalContext);
+    useContext(GlobalContext); // Imported context from global context provider
+
+  // To handle patient condition and give warnings if you are giving wrong medicine to patient.
 
   const handlePatientCondition = (medicine) => {
     if (patientDetails.suggested_medicine === "I" && medicine !== "I") {
@@ -58,6 +64,8 @@ const GiveMedicine = () => {
       );
     }
   };
+
+  // Submit the daily given medicine to that particular patient
 
   const handleSubmitData = async (e) => {
     e.preventDefault();

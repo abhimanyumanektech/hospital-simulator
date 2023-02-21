@@ -3,6 +3,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../context/GlobalContextProvider";
 import PatientChart from "../PatientChart/PatientChart";
 
+// used styled components
+
 const Wrapper = styled(Box)`
   border: 1px solid rgba(0, 0, 0, 0.23);
   padding: 15px;
@@ -35,14 +37,14 @@ const Doses = styled(Typography)`
   margin-top: 5px;
 `;
 
+// Component to show the patient details
+
 const PatientDetails = () => {
-  const { patientDetails } = useContext(GlobalContext);
+  const { patientDetails } = useContext(GlobalContext); // Imported context from global context provider
   const [condition, setCondition] = useState("");
   const [suggestedM, setSuggestedM] = useState("");
 
-  useEffect(() => {
-    console.log(patientDetails, "patientDetails");
-  }, [patientDetails]);
+  // Getting the full name of patient condition with condition shortcode
 
   const getCondition = () => {
     if (patientDetails.condition === "F") {
@@ -66,6 +68,8 @@ const PatientDetails = () => {
       return;
     }
   };
+
+  // Getting the full name of patient medicines with medicines shortcode
 
   const getSuggestedMedicines = () => {
     if (patientDetails.suggested_medicine === "As") {
@@ -112,6 +116,7 @@ const PatientDetails = () => {
               : patientDetails.dose + " Days"}
           </strong>
         </Doses>
+        {/* Component to show patients chart  */}
         <PatientChart />
       </Wrapper>
     </>
